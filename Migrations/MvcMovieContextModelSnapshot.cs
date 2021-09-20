@@ -37,6 +37,26 @@ namespace _NetCore.Migrations
 
                     b.ToTable("Movie");
                 });
+
+            modelBuilder.Entity("MvcMovie.Models.Student", b =>
+                {
+                    b.Property<int>("IdStudent")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("DiaChi")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("NamSinh")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("StudentName")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("IdStudent");
+
+                    b.ToTable("Student");
+                });
 #pragma warning restore 612, 618
         }
     }
